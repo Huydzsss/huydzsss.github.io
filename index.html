@@ -182,8 +182,9 @@
       PasswordError.innerText = 'Không được để trống pass';
       return false;
     }
-     if(!validateEmail(email.value)){
-      alert('Thiếu @ bạn ơi');
+     ar emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.value.trim())) {
+      alert('Địa chỉ email không hợp lệ.');
       return false;
     }
     return true;
@@ -203,11 +204,7 @@
       const result = age >= 0 ? `Tuổi của bạn là ${age} tuổi.` : 'Vui lòng nhập năm sinh hợp lệ.';
       document.getElementById('result').innerText = result;
     }
-  const validateEmail = (email) => {
-  return email.match(
-    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-  );
-};
+  
 </script>
 </body>
 </html>
