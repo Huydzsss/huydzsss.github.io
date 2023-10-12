@@ -178,15 +178,17 @@
     if(email.value == ''){
       EmailError.innerText = 'Không được để trống email';
       return false;
-    }else if(password.value == ''){
-      PasswordError.innerText = 'Không được để trống pass';
-      return false;
-    }
-     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    };
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email.value)) {
       alert('Địa chỉ email không hợp lệ.');
       return false;
-    }
+    };
+     if(password.value == ''){
+      PasswordError.innerText = 'Không được để trống pass';
+      return false;
+    };
+    
     return true;
   }
       
