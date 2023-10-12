@@ -182,7 +182,7 @@
       PasswordError.innerText = 'Không được để trống pass';
       return false;
     }
-     ar emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email.value) {
       alert('Địa chỉ email không hợp lệ.');
       return false;
