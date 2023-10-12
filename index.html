@@ -175,15 +175,15 @@
     var PasswordError = document.getElementById('ErrorPas');
     EmailError.textContent = '';
     PasswordError.textContent = '';
-    if(!validateEmail(email.value)){
-      alert('Thiếu @ bạn ơi');
-      return false;
-    }
     if(email.value == ''){
       EmailError.innerText = 'Không được để trống email';
       return false;
     }else if(password.value == ''){
       PasswordError.innerText = 'Không được để trống pass';
+      return false;
+    }
+     if(!validateEmail(email.value)){
+      alert('Thiếu @ bạn ơi');
       return false;
     }
     return true;
